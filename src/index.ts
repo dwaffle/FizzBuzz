@@ -1,8 +1,23 @@
-function HelloWorld(message: string) {
-    console.log("Hello World!");
-    const updatedMessage = { f: 1, b: 2 };
-
-    return 0;
+function FizzBuzz(
+    startNumber: number,
+    endNumber: number,
+    fizzNumber: number,
+    buzzNumber: number
+) {
+    for (let i = startNumber; i <= endNumber; i++) {
+        let fizzBuzzOutput = "";
+        if (i % fizzNumber == 0) {
+            fizzBuzzOutput = "Fizz";
+        }
+        if (i % buzzNumber == 0) {
+            fizzBuzzOutput += "Buzz";
+        }
+        if (i % fizzNumber != 0 && i % buzzNumber != 0) {
+            console.log(i);
+        } else {
+            console.log(fizzBuzzOutput);
+        }
+    }
 }
 
-HelloWorld("Goodbye cruel world");
+FizzBuzz(1, 20, 3, 5);
